@@ -15,11 +15,12 @@ export default function Button({
         secondary: 'bg-gray-500 hover:bg-gray-600 text-white',
         danger: 'bg-red-500 hover:bg-red-600 text-white',
         transparent: 'bg-transparent text-black border border-gray-300 hover:bg-gray-100',
+        dark: 'bg-black text-white'
     };
 
     const sizeStyles = {
         small: 'px-2 py-1 text-sm',
-        medium: 'px-4 py-2 text-base',
+        medium: 'px-4 py-2 text-md',
         large: 'px-6 py-3 text-lg',
     };
 

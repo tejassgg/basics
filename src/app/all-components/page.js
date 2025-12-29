@@ -10,6 +10,7 @@ import {
   FaUpload,
 } from "react-icons/fa";
 import Dropdown from "../components/dropdown/page.js";
+import InvitationModal from "../components/invitation/page.js";
 
 export default function AboutPage() {
   const handleClick = () => {
@@ -29,7 +30,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen p-6">
-      <h1>Buttons</h1>
+      <h1 className="text-3xl font-bold">Buttons</h1>
       <div className="flex items-center justify-start gap-4 mb-8">
         <Button
           href="/"
@@ -116,8 +117,8 @@ export default function AboutPage() {
         </Button>
       </div>
 
-      <h1>Dropdowns</h1>
-      <div className="flex items-center justify-start gap-4">
+      <h1 className="text-3xl font-bold">Dropdowns</h1>
+      <div className="flex items-center justify-start gap-4 mb-8">
         <Dropdown
           id="dropdown"
           options={dropdownOptions}
@@ -141,6 +142,11 @@ export default function AboutPage() {
           placeholder="Select..."
         />
         <Dropdown id="asdasdasd" options={dropdownOptions1} value={dropdownOptions1[0].value} />
+      </div>
+
+      <h1 className="text-3xl font-bold">Invitation Modal</h1>
+      <div className="flex items-center mb-8">
+        <InvitationModal />
       </div>
     </div>
   );

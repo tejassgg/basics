@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <div className="w-1/10 sticky top-0 flex flex-col justify-between border-r rounded-xl border-gray-300 ">
           <aside className="h-full flex flex-col gap-4 bg-gray-100 px-4 py-4 text-xl shadow-md shadow-gray-200 ">
             <Link className="hover:text-blue-500 transition-all ml-2 mt-12" href="/" >Home</Link>
-            <Link className="hover:text-blue-500 transition-all ml-2" href="/about">About</Link>
+            <Link className="hover:text-blue-500 transition-all ml-2" href="/all-components">Components</Link>
             <Link className="hover:text-blue-500 transition-all ml-2" href="/blog">Blog</Link>
             <Link className="hover:text-blue-500 transition-all ml-2" href="/blog/zingur">Dyna Blog</Link>
             <Link className="hover:text-blue-500 transition-all ml-2" href="/project">Project</Link>
