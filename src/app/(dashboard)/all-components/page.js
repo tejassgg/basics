@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "../components/button/page.js";
+import Button from "../../../components/Button.js";
 import { useState } from "react";
 import {
   FaCheck,
@@ -10,8 +10,8 @@ import {
   FaTrash,
   FaUpload,
 } from "react-icons/fa";
-import Dropdown from "../components/dropdown/page.js";
-import InvitationModal from "../components/invitation/page.js";
+import Dropdown from "../../../components/Dropdown.js";
+import InvitationModal from "../../../components/Invitation.js";
 
 export default function AboutPage() {
   const handleClick = () => {

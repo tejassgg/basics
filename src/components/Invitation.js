@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { FaCopy, FaTimes, FaUser, FaUserPlus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
-import Dropdown from "../dropdown/page";
-import Input from "../input/page";
-import Button from "../button/page";
+import Dropdown from "./Dropdown";
+import Input from "./Input";
+import Button from "./Button";
 
 export default function InvitationModal() {
   const linkToShareOptions = [

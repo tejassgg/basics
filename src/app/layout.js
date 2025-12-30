@@ -2,7 +2,7 @@ import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { configDotenv } from "dotenv";
-import Sidebar from "./(dashboard)/components/sidebar/page";
+import Sidebar from "../components/Sidebar";
 
 const montserrat = Montserrat({
   display: "swap", // 'swap' ensures text is visible while the font is loading

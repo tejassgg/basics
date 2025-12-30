@@ -5,6 +5,7 @@ export default function Input({
   disabled = false,
   className = "",
   placeholder = "",
+  required = false,
   children
 }) {
   return (
@@ -13,6 +14,7 @@ export default function Input({
       disabled={disabled}
       className={className}
       placeholder={placeholder}
+      required={required}
     >
       {children}
     </input>
