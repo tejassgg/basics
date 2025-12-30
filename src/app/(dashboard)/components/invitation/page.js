@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCopy, FaTimes, FaUser, FaUserPlus  } from "react-icons/fa";
+import { FaCopy, FaTimes, FaUser, FaUserPlus } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import Dropdown from "../dropdown/page";
 import Input from "../input/page";
@@ -147,30 +147,32 @@ export default function InvitationModal() {
               {/* Members List */}
               <div className="project-members">
                 <h1 className="text-xl font-bold mb-4">Project Members</h1>
-                {projectMembers.map((mem, index) => (
-                  <div
-                    className="flex items-center justify-between mb-6"
-                    key={index}
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="bg-gray-200 p-3 rounded-full">
-                        <FaUser size={18} />
-                      </span>
-                      <div className="flex flex-col">
-                        <h1 className="text-lg font-medium">{mem.name}</h1>
-                        <h3 className="text-sm text-gray-400">{mem.email}</h3>
+                <div className="flex flex-col gap-6">
+                  {projectMembers.map((mem, index) => (
+                    <div
+                      className="flex items-center justify-between"
+                      key={index}
+                    >
+                      <div className="flex items-center gap-4">
+                        <span className="bg-gray-200 p-3 rounded-full">
+                          <FaUser size={18} />
+                        </span>
+                        <div className="flex flex-col">
+                          <h1 className="text-lg font-medium">{mem.name}</h1>
+                          <h3 className="text-sm text-gray-400">{mem.email}</h3>
+                        </div>
                       </div>
+                      <Dropdown
+                        id={"dropdown" + index}
+                        options={authOptions}
+                        value={mem.authOption}
+                        buttonClassName="border border-gray-200 rounded-xl p-3 hover:shadow-md transition-all"
+                        listClassName="max-h-48 rounded-md"
+                        placeholder="Choose an option"
+                      />
                     </div>
-                    <Dropdown
-                      id={"dropdown" + index}
-                      options={authOptions}
-                      value={mem.authOption}
-                      buttonClassName="border border-gray-200 rounded-xl p-3 hover:shadow-md transition-all"
-                      listClassName="max-h-48 rounded-md"
-                      placeholder="Choose an option"
-                    />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>

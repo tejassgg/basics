@@ -1,14 +1,13 @@
 import { Montserrat } from "next/font/google";
-import Link from 'next/link';
+import Link from "next/link";
 import "./globals.css";
 import { configDotenv } from "dotenv";
-
+import Sidebar from "./(dashboard)/components/sidebar/page";
 
 const montserrat = Montserrat({
-  display: 'swap', // 'swap' ensures text is visible while the font is loading
-  variable: 'sans-serif',
-})
-
+  display: "swap", // 'swap' ensures text is visible while the font is loading
+  variable: "sans-serif",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -20,27 +19,8 @@ configDotenv();
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
-      <body
-        className={`${montserrat.variable} antialiased flex`}
-      >
-        <div className="w-1/10 sticky top-0 flex flex-col justify-between border-r rounded-xl border-gray-300 ">
-          <aside className="h-full flex flex-col gap-4 bg-gray-100 px-4 py-4 text-xl shadow-md shadow-gray-200 ">
-            <Link className="hover:text-blue-500 transition-all ml-2 mt-12" href="/" >Home</Link>
-            <Link className="hover:text-blue-500 transition-all ml-2" href="/all-components">Components</Link>
-            <Link className="hover:text-blue-500 transition-all ml-2" href="/blog">Blog</Link>
-            <Link className="hover:text-blue-500 transition-all ml-2" href="/blog/zingur">Dyna Blog</Link>
-            <Link className="hover:text-blue-500 transition-all ml-2" href="/project">Project</Link>
-          </aside>
-        </div>
-        <main className="w-9/10">
-          <div className="py-3 px-4 bg-gray-200">
-            <h1 className="text-4xl font-bold">
-              NavBar
-            </h1>
-          </div>
-          {children}
-        </main>
+      <body className={`${montserrat.variable} antialiased flex`}>
+        {children}
       </body>
     </html>
   );
